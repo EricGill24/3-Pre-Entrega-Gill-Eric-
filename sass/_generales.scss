@@ -1,0 +1,85 @@
+*{  margin: 0%;
+    padding: 0%;}
+h1, h2, h3, p, div, li{
+    font-family: 'Roboto', sans-serif
+}
+html, body{
+    background-color: rgba(205, 253, 215, 0.534);
+}
+.logo{
+    display: $display;
+}
+.sectionNav{
+    display: $display;
+}
+.desktop{
+    display: $display;
+}
+.img{
+    width: 85%;
+    border: solid 1px rgba(32, 148, 32, 0.562);
+    padding: 1%;
+}
+.imgconteiner{
+    @include display(flex);
+    justify-content: center;
+    margin: 2%;
+}
+.subtittle{
+    margin-left: 2.5%;
+}
+h1{
+    margin: 20px 0 20px 15px;
+}
+.description{
+    @extend .descripciones
+}
+.urlLinkedin li{
+    font-size: larger;
+    font-weight: bold;
+}
+/* inicio footer desplegable*/
+.footercard{
+    ul{
+        @include display(flex);
+        flex-direction: row-reverse;
+        list-style: none;
+        font-size:0;
+        ul{
+            position: absolute;
+            display: $display; 
+            li{
+                @include display(block);
+                background-color: rgba(205, 253, 215, 0.534);
+            }
+        }
+        li:hover ul{
+            @include display(block);
+            background-color: rgba(205, 253, 215, 0.534);
+        }
+    }
+    li{
+        @include display(inline-block);
+        width: 35%;
+        position:relative;
+        font-size: 14px;
+        
+    }
+} 
+/*fin footer desplegable*/
+/* FOOTER para pag grandes*/
+footer{
+    text-align: center;
+    bottom: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    ul{
+        list-style-type: none;
+        li{
+            @include display(inline-block);
+            position: relative;
+            padding: auto;
+            margin: 5px 5% 0 5%; 
+        }
+    }
+}
